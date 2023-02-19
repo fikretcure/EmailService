@@ -22,7 +22,14 @@ class ShippedRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "type" =>[
+                "required",
+                "string"
+            ],
+            "emails" => [
+                "required",
+                "array"
+            ]
         ];
     }
 }
