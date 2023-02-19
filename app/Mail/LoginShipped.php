@@ -29,7 +29,7 @@ class LoginShipped extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: request()->user . " " . 'Login Shipped',
+            subject: $this->data["user"] . " " . "Hoşgeldin",
         );
     }
 
