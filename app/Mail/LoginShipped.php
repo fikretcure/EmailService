@@ -13,7 +13,7 @@ class LoginShipped extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data;
+    public array $data;
 
     /**
      * Create a new message instance.
@@ -29,7 +29,7 @@ class LoginShipped extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->data["user"] . " " . "Hoşgeldin",
+            subject: $this->data["user"] . " " . "Hoşgeldiniz",
         );
     }
 

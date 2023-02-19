@@ -1,8 +1,10 @@
 <x-mail::message>
-# Introduction
+    Sayın #  {{$data["user"]}}
 
-Sistemimize giriş yaptınız.Kolaylıklar dileriz.
+    Sistemimize; {{$data["date"]}} tarihinde giriş yaptınız.
 
-Thanks,<br>
-{{ config('app.name') }}
+    Giriş Yapılan Tarayıcı : {{$data["http_user_agent"]}}
+
+    Kolaylıklar dileriz,
+    {{ config('app.name') }}
 </x-mail::message>
